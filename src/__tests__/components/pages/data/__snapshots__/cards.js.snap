@@ -741,6 +741,138 @@ exports[`Components : Pages : Data : Cards : Cases renders correctly 2`] = `
 </div>
 `;
 
+exports[`Components : Pages : Data : Cards : Definitions Panel renders correctly 1`] = `
+<div
+  aria-labelledby="definitionsDialogLabel"
+  aria-modal="true"
+  className="definitionsPanel"
+  role="dialog"
+  tabIndex="-1"
+>
+  <div
+    onKeyDown={[Function]}
+    role="presentation"
+  >
+    <div
+      className="header"
+    >
+      <h2
+        id="definitionsDialogLabel"
+      />
+      <div
+        className="closePanelContainer"
+      >
+        <button
+          className="closePanel"
+          type="button"
+        >
+          <img
+            alt="Close panel."
+            src="test-file-stub"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components : Pages : Data : Cards : Definitions Panel shows highlight detail 1`] = `
+<div
+  aria-labelledby="definitionsDialogLabel"
+  aria-modal="true"
+  className="definitionsPanel"
+  role="dialog"
+  tabIndex="-1"
+>
+  <div
+    onKeyDown={[Function]}
+    role="presentation"
+  >
+    <div
+      className="header"
+    >
+      <h2
+        id="definitionsDialogLabel"
+      />
+      <div
+        className="closePanelContainer"
+      >
+        <button
+          className="closePanel"
+          type="button"
+        >
+          <img
+            alt="Close panel."
+            src="test-file-stub"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="definition"
+      tabIndex="-1"
+    >
+      <h3
+        className="title"
+      >
+        Cases (confirmed plus probable)
+        :
+      </h3>
+       
+      <span
+        className="content"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Total number of <strong>confirmed plus probable cases</strong> of COVID-19 reported by the state or territory, ideally per the <a href=\\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/08/05/\\">August 5, 2020 CSTE case definition</a>. Some states are following the older <a href=\\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/\\">April 5th, 2020 CSTE case definition</a> or using their own custom definitions. Not all states and territories report probable cases. If a state is not reporting probable cases, this field will just represent confirmed cases. </p>",
+          }
+        }
+      />
+    </div>
+    <div
+      className="definition"
+      tabIndex="-1"
+    >
+      <h3
+        className="title"
+      >
+        Confirmed Cases or Positive PCR tests (people)
+        :
+      </h3>
+       
+      <span
+        className="content"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Total number of <strong>unique people with a positive PCR or other approved nucleic acid amplification test (NAAT)</strong>, as reported by the state or territory. This is equivalent to a <strong>confirmed case</strong> as per the <a href=\\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/08/05/\\">CSTE case definitions of August 5th, 2020</a> and <a href=\\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/\\">April 5th, 2020</a>. If we discover a jurisdiction is labeling cases as confirmed using other evidence (e.g. positive antigen tests), we will annotate that state or territory’s data accordingly.  </p>",
+          }
+        }
+      />
+    </div>
+    <div
+      className="definition"
+      tabIndex="-1"
+    >
+      <h3
+        className="title"
+      >
+        Probable Cases
+        :
+      </h3>
+       
+      <span
+        className="content"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Total number of <strong>probable cases of COVID-19</strong> as reported by the state or territory, ideally per the <a href=\\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/08/05/\\">August 5, 2020 CSTE case definition</a>. By this definition, a probable case is someone who tests positive via antigen without a positive PCR or other approved nucleic acid amplification test (NAAT), someone with clinical and epidemiological evidence of COVID-19 infection with no confirmatory laboratory testing performed for SARS-CoV-2, or someone with COVID-19 listed on their death certificate with no confirmatory laboratory testing performed for SARS-CoV-2.  Some states are following the older <a href=\\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/\\">April 5th, 2020 CSTE case definition</a> or using their own custom definitions. </p>",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Components : Pages : Data : Cards : Hospitalization renders correctly 1`] = `
 <div
   className="card"

@@ -15,6 +15,7 @@ import DefaultSmallCard from '~components/pages/data/cards/small'
 import DataAsGraphicSmallCard from '~components/pages/data/cards/small/data-as-graphic-small-card'
 import ViewRacialDataSmallCard from '~components/pages/data/cards/small/view-racial-data-small-card'
 import GradeSmallCard from '~components/pages/data/cards/small/grade-small-card'
+import { DefinitionPanel } from '~components/pages/data/cards/definitions-panel'
 
 describe('Components : Pages : Data : Cards : Cases', () => {
   it('renders correctly', () => {
@@ -351,6 +352,26 @@ describe('Components : Pages : Data : Cards : Small Cards : View racial data', (
         <ViewRacialDataSmallCard stateAbbreviation="KS" ignoreStates={[]} />,
       )
       .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})
+
+describe('Components : Pages : Data : Cards : Definitions Panel', () => {
+  
+  it('renders correctly', () => {
+    const tree = renderer
+    .create(
+      <DefinitionPanel /> 
+    ).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+  it('shows highlight detail', () => {
+    const definitions = [{"0":"p","1":"o","2":"s","3":"i","4":"t","5":"i","6":"v","7":"e","name":"Cases (confirmed plus probable)","fieldName":"positive","childContentfulDataDefinitionDefinitionTextNode":{"childMarkdownRemark":{"html":"<p>Total number of <strong>confirmed plus probable cases</strong> of COVID-19 reported by the state or territory, ideally per the <a href=\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/08/05/\">August 5, 2020 CSTE case definition</a>. Some states are following the older <a href=\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/\">April 5th, 2020 CSTE case definition</a> or using their own custom definitions. Not all states and territories report probable cases. If a state is not reporting probable cases, this field will just represent confirmed cases. </p>"}}},{"0":"p","1":"o","2":"s","3":"i","4":"t","5":"i","6":"v","7":"e","8":"C","9":"a","10":"s","11":"e","12":"s","13":"V","14":"i","15":"r","16":"a","17":"l","name":"Confirmed Cases or Positive PCR tests (people)","fieldName":"positiveCasesViral","childContentfulDataDefinitionDefinitionTextNode":{"childMarkdownRemark":{"html":"<p>Total number of <strong>unique people with a positive PCR or other approved nucleic acid amplification test (NAAT)</strong>, as reported by the state or territory. This is equivalent to a <strong>confirmed case</strong> as per the <a href=\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/08/05/\">CSTE case definitions of August 5th, 2020</a> and <a href=\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/\">April 5th, 2020</a>. If we discover a jurisdiction is labeling cases as confirmed using other evidence (e.g. positive antigen tests), we will annotate that state or territory’s data accordingly.  </p>"}}},{"0":"p","1":"r","2":"o","3":"b","4":"a","5":"b","6":"l","7":"e","8":"C","9":"a","10":"s","11":"e","12":"s","name":"Probable Cases","fieldName":"probableCases","childContentfulDataDefinitionDefinitionTextNode":{"childMarkdownRemark":{"html":"<p>Total number of <strong>probable cases of COVID-19</strong> as reported by the state or territory, ideally per the <a href=\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/08/05/\">August 5, 2020 CSTE case definition</a>. By this definition, a probable case is someone who tests positive via antigen without a positive PCR or other approved nucleic acid amplification test (NAAT), someone with clinical and epidemiological evidence of COVID-19 infection with no confirmatory laboratory testing performed for SARS-CoV-2, or someone with COVID-19 listed on their death certificate with no confirmatory laboratory testing performed for SARS-CoV-2.  Some states are following the older <a href=\"https://wwwn.cdc.gov/nndss/conditions/coronavirus-disease-2019-covid-19/case-definition/2020/\">April 5th, 2020 CSTE case definition</a> or using their own custom definitions. </p>"}}}]
+
+    const tree = renderer
+    .create(
+      <DefinitionPanel definitions={definitions} /> 
+    ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
